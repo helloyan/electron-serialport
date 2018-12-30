@@ -1,41 +1,28 @@
 # electron-serialport
-An example of how to use serialport in an electron app
 
-**Clone and run for a quick way to see Electron and Serialport in action.**
+一个能运行的electron-serialport例程
 
-This is a minimal Electron application based on the [Quick Start Guide](http://electron.atom.io/docs/tutorial/quick-start) within the Electron documentation.
-
-**Use this app along with the [Electron API Demos](http://electron.atom.io/#get-started) app for API code examples to help you get started.**
-
-A basic Electron application needs just these files:
-
-- `package.json` - Points to the app's main file and lists its details and dependencies.
-- `main.js` - Starts the app and creates a browser window to render HTML. This is the app's **main process**.
-- `index.html` - A web page to render. This is the app's **renderer process**.
-
-You can learn more about each of these components within the [Quick Start Guide](http://electron.atom.io/docs/tutorial/quick-start).
-
-## To Use
-
-To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+## 依赖
 
 ```bash
-# Clone this repository
-git clone https://github.com/johnny-five-io/electron-serialport.git
-# Go into the repository
+# 安装node-gyp，建议全局
+npm install -g node-gyp
+## 很多无法编译的是缺少这个，时间不短，耐心等待，另外如果机器已有py27，可以设置进path，安装时会自动跳过
+npm install -g windows-build-tools
+```
+
+## 使用
+
+```bash
+# clone源
+git clone https://github.com/helloyan/electron-serialport.git
 cd electron-serialport
-# Install dependencies
-npm install
-# Run the app
+# msvs_version参数视windows-build-tools安装的版本而定，默认是2017
+npm install --msvs_version=2017
+# 运行
 npm start
 ```
 
-Learn more about Electron and its API in the [documentation](http://electron.atom.io/docs/).
-
-## Other Example Apps
-
-For more example apps, see the
-[list of boilerplates](http://electron.atom.io/community/#boilerplates)
-created by the awesome electron community.
+更多请参照fork源 [electron-serialport](https://github.com/nodebots/electron-serialport).
 
 #### License [CC0 1.0 (Public Domain)](LICENSE.md)

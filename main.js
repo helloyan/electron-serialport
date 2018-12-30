@@ -8,12 +8,12 @@ const path = require('path')
 const url = require('url')
 
 // Keep a global reference of the window object, if you don't, the window will
-// be closed automatically when the JavaScript object is garbage collected.
+// be closed automatically when the JavaScript object is garbage collected.f
 let mainWindow
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 1200, height: 600})
+  mainWindow = new BrowserWindow({ width: 1200, height: 600, webPreferences: { nodeIntegration: true } })
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
